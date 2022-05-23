@@ -3,21 +3,38 @@
     src: url("RusselSquareOpti.otf") format("opentype");
 }
 
+html {
+    background-color: black;
+}
+
 * {
     font-family: RusselSquare;
+    color: white;
 }
 
 fieldset {
     width: 10em;
     display: flex;
     flex-direction: column;
-    background: repeating-linear-gradient( rgba(0,0,0,0.1) 0px,
-                                           rgba(0,0,0,0.1) 1px,
+}
+
+form {
+    background: repeating-linear-gradient( rgba(0,0,0,1) 0px,
+                                           rgba(0,0,0,1) 1px,
                                            rgba(0,0,0,0.3) 1px,
                                            rgba(0,0,0,0.3) 2px);
-    background-color: lightblue;
+    padding: 2em 2em 2em 2em;
+    background-color: hsl(200 100% 85% / 0.5);
+    width: fit-content;
+    border-radius: 15%;
+    box-shadow: 0 0 10px 10px rgb(0 0 0) inset;
 }
 
 fieldset * {
     margin: 0.1em 0em 0.1em 0em;
+}
+
+legend ~ * {
+    background-color: rgb(92 107 192 / 0.5);
+    border: solid 0.1em rgb(255 255 255 / 50%);
 }
