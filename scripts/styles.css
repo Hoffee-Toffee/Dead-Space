@@ -1,6 +1,6 @@
 @font-face {
     font-family: RusselSquare;
-    src: url("/scripts/RusselSquareOpti.otf") format("opentype");
+    src: url("RusselSquareOpti.otf") format("opentype");
 }
 
 h1 {
