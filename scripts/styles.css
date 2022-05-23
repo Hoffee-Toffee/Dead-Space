@@ -3,6 +3,16 @@
     src: url("RusselSquareOpti.otf") format("opentype");
 }
 
-h1 {
+* {
     font-family: RusselSquare;
+}
+
+fieldset {
+    width: 10em;
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset * {
+    margin: 0.1em 0em 0.1em 0em;
 }
