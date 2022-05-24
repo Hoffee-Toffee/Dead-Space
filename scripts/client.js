@@ -26,4 +26,7 @@ document.addEventListener('keydown', function(e) {
 
         activate(document.getElementById('menu').children[index])
     }
+    else if (e.key == "Enter"){
+        window["active"].click()
+    }
 })
