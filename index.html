@@ -10,17 +10,19 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="scripts/styles.css" />
+    <script src="scripts/client.js"></script>
+
   </head>
   <body>
     <form>
       <span id="scanline"></span>
-      <fieldset>
+      <fieldset id="menu">
         <legend>/main menu</legend>
 
-        <button id="New Game">New Game</button>
-        <button id="Load Game">Load Game</button>
-        <button id="Options">Options</button>
-        <button id="Exit to Windows">Exit to Windows</button>
+        <button id="New Game" onmouseover="activate(this)" class="active">New Game</button>
+        <button id="Load Game" onmouseover="activate(this)">Load Game</button>
+        <button id="Options" onmouseover="activate(this)">Options</button>
+        <button id="Exit to Windows" onmouseover="activate(this)">Exit to Windows</button>
       </fieldset>
     </form>
   </body>

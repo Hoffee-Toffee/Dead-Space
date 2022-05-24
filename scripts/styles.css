@@ -54,7 +54,7 @@ legend ~ * {
     border: solid 0.1em rgb(255 255 255 / 50%);
 }
 
-legend ~ :hover {
+legend ~ .active {
     color: white;
     background-color: hwb(200deg 19% 61% / 70%);
     border: solid 0.1em rgb(200 200 255 / 50%);
