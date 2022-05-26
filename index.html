@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<html><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Dead Space UI</title>
-    <meta
-      name="description"
-      content="A page in the style of the UI from Dead Space"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="scripts/styles.css" />
+    <meta name="description" content="A page in the style of the UI from Dead Space">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="scripts/styles.css">
     <script src="scripts/client.js"></script>
 
   </head>
@@ -19,11 +14,23 @@
       <fieldset id="menu">
         <legend>/main menu</legend>
 
-        <button id="New Game" onmouseover="activate(this)" class="active">New Game</button>
-        <button id="Load Game" onmouseover="activate(this)">Load Game</button>
-        <button id="Options" onmouseover="activate(this)">Options</button>
-        <button id="Exit to Windows" onmouseover="activate(this)">Exit to Windows</button>
+        <button id="New Game" onmouseover="activate(this)" class="">
+          <div>New Game</div>
+        </button>
+
+        <button id="Load Game" onmouseover="activate(this)" class="">
+          <div>Load Game</div>
+        </button>
+
+        <button id="Options" onmouseover="activate(this)" class="active">
+          <div>Options</div>
+        </button>
+
+        <button id="Exit to Windows" onmouseover="activate(this)" class="">
+          <div>Exit to Windows</div>
+        </button>
+        
       </fieldset>
     </form>
-  </body>
-</html>
+  
+</body></html>
