@@ -42,22 +42,31 @@ form {
     z-index: 0;
 }
 
-fieldset * {
-    margin: 0.1em 0em 0.1em 0em;
-}
-
-
-legend ~ * {
-    text-align: left;
-    color: grey;
+button {
+    margin: 0.1em -1.5em 0.1em -1.5em;
+    padding-left: 1.5em;
+    transition: 0.2s;
     background-color: hwb(200deg 19% 61% / 95%);
     border: solid 0.1em rgb(255 255 255 / 50%);
+    position: relative;
 }
 
-legend ~ .active {
-    color: white;
+button * {
+    transition: 0.1s;
+    font-size: 1em;
+    text-align: left;
+    color: grey;
+}
+
+.active {    
+    transition: 0.1;
     background-color: hwb(200deg 19% 61% / 70%);
     border: solid 0.1em rgb(200 200 255 / 50%);
+}
+
+.active * {
+    font-size: 1.1em;
+    color: white;
 }
 
 
