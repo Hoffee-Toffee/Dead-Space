@@ -21,12 +21,6 @@ html {
     font-size: 1.1em
 }
 
-fieldset {
-    width: 10em;
-    display: flex;
-    flex-direction: column;
-}
-
 form {
     position: relative;
     background: repeating-linear-gradient( rgba(0,0,0,1) 0ex,
@@ -35,20 +29,46 @@ form {
                                            rgba(0,0,0,0.3) 4px);
     animation: lines 5s linear infinite;
     padding: 2em 2em 2em 2em;
-    background-color: hsl(200 100% 85% / 0.5);
+    background-color: rgb(153 221 255 / 50%);
     width: fit-content;
     border-radius: 15%;
     box-shadow: 0 0 40px 20px rgb(0 0 0) inset;
     z-index: 0;
 }
 
+fieldset {
+	border: 0;
+    width: 10em;
+    display: flex;
+    flex-direction: column;
+}
+
 button {
-    margin: 0.1em -1.5em 0.1em -1.5em;
-    padding-left: 1.5em;
+    margin: 0.1em -1.5em 0.1em -0.8em;
+    padding: 0.2em 0em 0.2em 2.25em;
     transition: 0.2s;
-    background-color: hwb(200deg 19% 61% / 95%);
-    border: solid 0.1em rgb(255 255 255 / 50%);
+	background-color: hsl(204 46% 15% / 0.95);
+    border: none;
     position: relative;
+    clip-path: polygon(
+		2em 0.35em,
+		2.5em 0%,
+		2em 0%,
+		100% 0%,
+		100% 0%,
+		100% calc(100% - 0.35em),
+		calc(100% - 0.5em) 100%,
+		2.5em 100%,
+		2em calc(100% - 0.35em),
+		2em calc(100% - 0.7em),
+		1.25em calc(100% - 0.7em),
+		1.25em calc(100% - 0.35em),
+		0% calc(100% - 0.35em),
+		0% 0.35em,
+		1.25em 0.35em,
+		1.25em 0.7em,
+		2em 0.7em
+    );
 }
 
 button * {
@@ -58,10 +78,67 @@ button * {
     color: grey;
 }
 
+button ::before {
+	transition: 0.2s;
+	content: "";
+	position: absolute;
+	background-color: rgb(255 255 255 / 25%);
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	
+	clip-path: polygon(
+		2em 0.35em,
+		2.5em 0%,
+		2em 0%,
+		100% 0%,
+		100% 0%,
+		100% calc(100% - 0.35em),
+		calc(100% - 0.5em) 100%,
+		2.5em 100%,
+		2em calc(100% - 0.35em),
+		2em calc(100% - 0.7em),
+		1.25em calc(100% - 0.7em),
+		1.25em calc(100% - 0.35em),
+		0% calc(100% - 0.35em),
+		0% 0.35em,
+		1.25em 0.35em,
+		1.25em 0.7em,
+		2em 0.7em,
+		
+		2.1em 0.8em,
+		1.15em 0.8em,
+		1.15em 0.45em,
+		0.1em 0.45em,
+		0.1em calc(100% - 0.45em),
+		1.15em calc(100% - 0.45em),
+		1.15em calc(100% - 0.8em),
+		2.1em calc(100% - 0.8em),
+		2.1em calc(100% - 0.4em),
+		2.5em calc(100% - 0.1em),
+		calc(100% - 0.5em) calc(100% - 0.1em),
+		calc(100% - 0.1em) calc(100% - 0.4em),
+		calc(100% - 0.1em) 0.1em,
+		calc(100% - 0.1em) 0.1em,
+		1.9em 0.1em,
+		2.5em 0.1em,
+		2.1em 0.4em,
+		
+		2.1em 0.8em,
+		2em 0.7em
+	)
+}
+
+.active ::before {
+	background-color: rgb(200 200 255 / 50%);
+	font-size: 0.9em;
+}
+
 .active {    
     transition: 0.1;
-    background-color: hwb(200deg 19% 61% / 70%);
-    border: solid 0.1em rgb(200 200 255 / 50%);
+	background-color: rgb(30 60 80 / 0.7);
+    margin-right: -2em;
 }
 
 .active * {
